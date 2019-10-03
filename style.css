@@ -1,0 +1,25 @@
+
+#ext-block{
+    background: #0e0d0d;
+    padding: 15px;
+    text-align: center;
+    color: white !important;
+    width: 22%;
+    float: right;
+    right: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    display: none;
+    margin-right: calc(-30%);
+    /* overflow-y: scroll; */
+    /* overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto; */
+    color: white;
+    z-index: 999;
+}
+
+#ext-block-header{
+    color:white;
+}

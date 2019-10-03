@@ -1,0 +1,36 @@
+{
+    "manifest_version":2,
+    "name": "Whatsapp Chrome Extention",
+    "version":"0.01",
+    "description":"Whatsapp and salesforce chrome extention",
+    
+    "content_scripts":[
+        {
+            "all_frames": true,
+            "matches": [ "https://web.whatsapp.com/*", "https://web.whatsapp.com/*"
+            ],
+            "js":["jquery-3.4.1.min.js","wa-content.js"],
+            "css": [ "style.css" ],
+            "run_at": "document_end"
+        },
+        {
+            "all_frames": true,
+            "matches": ["https://*.salesforce.com/*", "https://*.my.salesforce.com/*", "https://*.lightning.force.com/*", "https://*.visual.force.com/*"],
+            "js": ["jquery-3.4.1.min.js", "sf-content.js"],
+            "run_at": "document_end"
+          }
+    ],
+    "background":{
+        "scripts":["background.js"]
+    },
+    "browser_action":{
+        "default_icon":"download.png",
+        "default_popup":"popup.html",
+        "default_title":"popup will come here"
+    },
+
+    "web_accessible_resources": ["iframeContent.html"],
+
+    "permissions": [ "contentSettings","tabs", "cookies", "https://*.whatsapp.com/*", "https://*.telegram.org/*", "https://*.salesforce.com/*", "https://*.my.salesforce.com/*", "https://*.lightning.force.com/*", "https://*.visual.force.com/*", "https://ssl.google-analytics.com/*", "https://*.overstack.io/*", "https://*.whatslly.com/*", "activeTab", "webRequest", "webRequestBlocking" ]
+
+}
